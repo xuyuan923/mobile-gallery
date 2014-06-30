@@ -1,0 +1,45 @@
+1、传统web端，DOM animation事件由移动端css3代替 
+2、css3 CPU渲染，效率高很多
+3、touch事件
+touchstart、touchmove、touchend、touchcancel(系统事件)
+4、click事件300ms延时
+touch支持多点触摸，手势事件
+5、canvas
+使用canvas代替images,canvas会触发GPU设备，物理渲染
+drawImage API
+drawImage(image,x,y);(在canvas上绘制图片)
+drawImage(image,x,y,width,height)(在canvas上缩放并绘制图片)
+6、css3 keyframe有兼容性问题
+@-webkit-keyframes myfirst{
+0% {background:red;}
+25% {background:yellow;}
+50% {background:blue;}
+100% {background:green;}
+}
+
+@keyframes myfirst{
+0% {background:red;}
+25% {background:yellow;}
+50% {background:blue;}
+100% {background:green;}
+}
+
+div{
+//chrome safari opera
+-webkit-animation-name:myfirst;
+-webkit-animation-duration:5s;
+-webkit-animation-timing-function:linear;
+-webkit-animation-delay:2s;
+-webkit-animation-iteration-count:infinite //动画无限循环
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+//standard syntax
+animation-name:myfirst;
+animation-duration:5s;
+animation-timing-function:linear;
+animation-delay:2s;
+animation-iteration-count:infinite //动画无限循环
+animation-direction:alternate;
+animation-play-state:running;
+}
+}
